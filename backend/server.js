@@ -28,11 +28,11 @@ app.get('/', (req, res) => {
 })
 
 
-const MONGO_URL = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/movie-reviewz';
+const MONGO_URI = process.env.MONGO_URI; 
 const PORT = process.env.PORT || 1234;
 
 
-mongoose.connect(MONGO_URL, {
+mongoose.connect(MONGO_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true
   })
