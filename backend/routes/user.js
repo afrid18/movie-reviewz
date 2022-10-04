@@ -1,10 +1,7 @@
-const express = require('express'),
-  router = express.Router(),
-  verifyToken = require('../middlewares/authJWT'),
-  {
-    signup,
-    signin
-  } = require('../controllers/auth.controller.js')
+const express = require('express')
+const router = express.Router()
+const verifyToken = require('../middlewares/authJWT')
+const { signup, signin } = require('../controllers/auth.controller.js')
 
 
 router.post("/register", signup, function(req, res) {
