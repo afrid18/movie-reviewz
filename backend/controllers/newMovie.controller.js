@@ -1,7 +1,7 @@
 const Movie = require('../models/Movie')
 
 
-exports.movie = (req, res) {
+exports.movie = (req, res) => {
   const newMovie = new Movie({
     title : req.body.title,
     releaseDate : req.body.releaseDate,
